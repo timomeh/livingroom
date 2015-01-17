@@ -52,10 +52,6 @@ cite {
   font-size: 1.125em;
   line-height: 1.75em;
   margin: 1.4em 0;
-
-  .wf-loading & {
-    visibility: hidden;
-  }
 }
 
 blockquote {
@@ -65,16 +61,6 @@ blockquote {
 h3 {
   font-size: 2.25em;
   line-height: 1.111;
-
-  .wf-loading & {
-    visibility: hidden;
-  }
-}
-
-.article_date {
-  .wf-loading & {
-    visibility: hidden;
-  }
 }
 
 a {
