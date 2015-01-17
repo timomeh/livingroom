@@ -1,0 +1,20 @@
+.b-header {
+  text-align: center;
+
+  .header_brand {
+    margin: 70px 0 100px;
+    display: inline-block;
+  }
+
+  .brand_logo {
+    width: 150px;
+    height: 65px;
+    fill: none;
+    stroke: $green;
+    stroke-width: 3;
+  }
+
+  .brand_name {
+    @extend .sr-only;
+  }
+}

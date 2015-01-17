@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $green-black;
+}
+
+body {
+  margin: 0;
+  border-top: 5px solid $green;
+  background-color: $white;
+  color: $green-black;
+  font-family: $text-fallback-family;
+  font-weight: $text-weight;
+
+  .wf-active & {
+    font-family: $text-family;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headline-fallback-family;
+  font-weight: $headline-weight - 200;
+
+  .wf-active & {
+    font-family: $headline-family;
+    font-weight: $headline-weight;
+  }
+}
+
+p,
+ul,
+ol,
+cite {
+  font-size: 1.125em;
+  line-height: 1.75em;
+  margin: 1.4em 0;
+
+  .wf-loading & {
+    visibility: hidden;
+  }
+}
+
+blockquote {
+  margin: 0;
+}
+
+h3 {
+  font-size: 2.25em;
+  line-height: 1.111;
+
+  .wf-loading & {
+    visibility: hidden;
+  }
+}
+
+.article_date {
+  .wf-loading & {
+    visibility: hidden;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: .2s color;
+
+  &:hover, &:focus {
+    color: $green;
+  }
+}
+
+.type-twitter {
+  background-color: #55acee !important;
+}
+
+.type-facebook {
+  background-color: #3b5998 !important;
+}
+
+.type-instagram {
+  background-color: #3f729b !important;
+}
+
+.type-github {
+  background-color: #4183c4 !important;
+}

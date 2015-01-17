@@ -1,0 +1,12 @@
+.b-pagenav {
+  @extend .b-content;
+  @include clearfix;
+
+  .pagenav--new {
+    float: left;
+  }
+
+  .pagenav--old {
+    float: right;
+  }
+}

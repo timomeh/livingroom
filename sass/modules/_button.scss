@@ -1,0 +1,29 @@
+.m-button {
+  padding: 15px 30px;
+  border-radius: 5px;
+  border-bottom: 2px solid $green-darker;
+  background-color: $green;
+  font-size: 1.25em;
+  text-align: center;
+  color: $white;
+  transition: .2s background-color;
+
+  &:hover, &:focus {
+    color: $white;
+    background-color: lighten($green, 3);
+  }
+
+  &:active {
+    position: relative;
+    top: 2px;
+    margin-bottom: 2px;
+    border: none;
+  }
+
+  &.m-button--large {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
