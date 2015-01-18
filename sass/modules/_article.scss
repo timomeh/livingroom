@@ -53,6 +53,15 @@
     }
   }
 
+  .more-link {
+    color: $grey;
+    border-bottom: none;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
   blockquote {
     padding-left: 39px;
     font-style: italic;

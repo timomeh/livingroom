@@ -4,7 +4,7 @@ Theme URI: http://timomeh.de
 Description: Maybe I'm wasting my onions.
 Author: Timo Maemecke
 Author URI: http://timomeh.de
-Version: 1.0.5
+Version: 1.0.6
 */
 
 /* Changelog:
@@ -15,5 +15,6 @@ Version: 1.0.5
 1.0.3: (hopefully) better FOUT
 1.0.4: Changed FOUT back to "see text asap" because Google told me so
 1.0.5: Open Graph, Facebook and Twitter Meta Data added
+1.0.6: Changed style of more link, fixed bug in get_custom_excerpt
 
 */

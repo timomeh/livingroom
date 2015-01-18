@@ -106,7 +106,7 @@ function generate_custom_excerpt($post_content) {
       }
       else {
         // If current sentence can be added as a whole, add him!
-        $display .= $sentences[$i] . " ";
+        $display .= $sentences[$i];
       }
 
       $length_of_display += strlen($sentences[$i]) + 1;
