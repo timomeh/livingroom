@@ -32,6 +32,6 @@ $(function() {
 
   // Fixed browser history bug
   $("iframe").each(function() {
-    $(this).attr('src', $iframe.attr('src'));
+    $(this).attr('src', $(this).attr('src'));
   });
 });
