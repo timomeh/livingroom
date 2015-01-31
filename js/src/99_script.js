@@ -31,8 +31,7 @@ $(function() {
   $(".m-article").fitVids({ customSelector: "iframe[src^='http://youtube.googleapis.com']" });
 
   // Fixed browser history bug
-  $(".fluid-width-video-wrapper").each(function() {
-    var $iframe = $(this).children('iframe');
-    $iframe.attr('src', $iframe.attr('src'));
+  $("iframe").each(function() {
+    $(this).attr('src', $iframe.attr('src'));
   });
 });
