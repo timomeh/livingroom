@@ -2,9 +2,9 @@
 
 $post_id = $post->ID;
 $description = get_excerpt_of_id($post_id);
-$thumbnails = get_thumbnail_of_id($post_id, array('medium', 'facebook'));
-if($thumbnails['medium'] == "") {
-  $thumbnails['medium'] = home_url() . "/wp-content/themes/livingroom/img/twimg.png";
+$thumbnails = get_thumbnail_of_id($post_id, array('large', 'facebook'));
+if($thumbnails['large'] == "") {
+  $thumbnails['large'] = home_url() . "/wp-content/themes/livingroom/img/twimg.png";
   $thumbnails['facebook'] = home_url() . "/wp-content/themes/livingroom/img/fbimg.png";
 }
 $title = get_the_title($post_id);
@@ -32,7 +32,7 @@ switch(get_post_format()) {
   <meta name="twitter:title" content="<?= $title; ?>" />
   <meta name="twitter:description" content="<?= $description ?>" />
   <meta name="twitter:url" content="<?= $uri_path ?>" />
-  <meta name="twitter:image" content="<?= $thumbnails['medium']; ?>" />
+  <meta name="twitter:image" content="<?= $thumbnails['large']; ?>" />
   <meta property="article:author" content="https://www.facebook.com/timo.maemecke" />
   <meta property="og:url" content="<?= $uri_path ?>" />
   <meta property="og:site_name" content="timomeh" />
