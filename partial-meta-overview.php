@@ -1,12 +1,12 @@
 <?php
 
-$description = get_latest_excerpt();
-$thumbnails = get_latest_thumbnail(array('thumbnail', 'facebook'));
-if($thumbnails['thumbnail'] == "") {
-  $thumbnails['thumbnail'] = home_url() . "/wp-content/themes/livingroom/img/twimg.png";
-  $thumbnails['facebook'] = home_url() . "/wp-content/themes/livingroom/img/fbimg.png";
-}
+$description = bloginfo('description');
 $title = "";
+
+$thumbnails = [
+  'thumbnail' => home_url() . '/wp-content/themes/livingroom/img/twimg.png',
+  'facebook' => home_url() . "/wp-content/themes/livingroom/img/fbimg.png"
+];
 
 if(is_archive()) {
   if(is_day()) $title = "Archiv vom " . get_the_date('j. F Y');

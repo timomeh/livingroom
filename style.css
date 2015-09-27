@@ -4,7 +4,7 @@ Theme URI: http://timomeh.de
 Description: Maybe I'm wasting my onions.
 Author: Timo Maemecke
 Author URI: http://timomeh.de
-Version: 1.0.7
+Version: 1.0.9
 */
 
 /* Changelog:
@@ -18,5 +18,7 @@ Version: 1.0.7
 1.0.6: Changed style of more link, fixed bug in get_custom_excerpt
 1.0.7: Fixed chrome history bug to all iframes, not just the fitvids iframes
 1.0.8: Twitter Card Image is bigger
+1.0.9: Removed weird transition delay
+1.0.10: Meta-Improvements
 
 */
