@@ -27,8 +27,7 @@ switch(get_post_format()) {
 
 if ($isStandardThumbnail) $card = 'summary';
 
-?>
-<meta name="title" content="timomeh.de" />
+?><meta name="title" content="timomeh.de" />
   <meta name="description" content="<?= $description ?>" />
   <meta name="twitter:card" content="<?= $card ?>" />
   <meta name="twitter:site" content="@timomeh" />

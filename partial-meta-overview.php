@@ -1,6 +1,6 @@
 <?php
 
-$description = bloginfo('description');
+$description = get_bloginfo('description');
 $title = "";
 
 $thumbnails = [
@@ -25,8 +25,7 @@ else {
 $uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
 $uri_path = 'http://' . $_SERVER['HTTP_HOST'] . $uri_parts[0];
 
-?>
-  <meta name="title" content="timomeh" />
+?><meta name="title" content="timomeh" />
   <meta name="description" content="<?= $description ?>" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@timomeh" />
