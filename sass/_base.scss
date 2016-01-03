@@ -32,16 +32,24 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-family: $headline-fallback-family;
   font-weight: $headline-weight - 200;
 
   .wf-active & {
     font-family: $headline-family;
     font-weight: $headline-weight;
+  }
+}
+
+h4,
+h5,
+h6 {
+  font-family: $text-fallback-family;
+  font-weight: 600;
+
+  .wf-active & {
+    font-family: $text-family;
   }
 }
 
@@ -61,6 +69,16 @@ blockquote {
 h3 {
   font-size: 2.25em;
   line-height: 1.111;
+}
+
+h4 {
+  font-size: 1.4em;
+  margin-bottom: -20px;
+}
+
+h5 {
+  font-size: 1.3em;
+  margin-bottom: -25px;
 }
 
 a {
