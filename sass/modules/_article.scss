@@ -31,7 +31,7 @@
     color: $grey;
     transition: .2s color;
     margin-bottom: 1.4em;
-    
+
     span {
       @media #{$medium-up} {
         text-align: right;
@@ -89,6 +89,16 @@
     display: block;
     max-width: 100%;
     margin: 0 auto !important;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid $silver;
+    margin: 40px 60px;
+
+    @media #{$medium-up} {
+      margin: 40px 120px;
+    }
   }
 
   &.m-article--quote {
