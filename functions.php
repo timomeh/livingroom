@@ -62,12 +62,15 @@ function get_thumbnail_of_id($post_id, $sizes) {
   return $result;
 }
 
-function generate_custom_excerpt($post_content) {
+function generate_custom_excerpt($post_content, $post_excerpt) {
   // post_content of found post without linebreaks
   $post_content = preg_replace( "/\r|\n/", "", strip_tags($post_content));
 
+  if (strlen($post_content) > 0) $post_text = $post_content;
+  elseif (strlen($post_excerpt) > 0) $post_text = $post_excerpt;
+
   // split sentences
-  $sentences_with_delim = preg_split("/([.?!:–—] )/", $post_content, 0, PREG_SPLIT_DELIM_CAPTURE);
+  $sentences_with_delim = preg_split("/([.?!:–—] )/", $post_text, 0, PREG_SPLIT_DELIM_CAPTURE);
   $sentences = array();
   for($i = 0; $i <= count($sentences_with_delim); $i += 2) {
     $sentences[] = ltrim($sentences_with_delim[$i] . $sentences_with_delim[$i + 1], " ");
@@ -108,7 +111,7 @@ function generate_custom_excerpt($post_content) {
     $display .= "…";
   }
 
-  $display = str_replace(array("\r", "\n"), "", $display);
+  $display = htmlspecialchars(str_replace(array("\r", "\n"), "", $display));
   if ($display == "") {
     return "[Diesen Post direkt auf timomeh.de anschauen]";
   }
@@ -117,7 +120,7 @@ function generate_custom_excerpt($post_content) {
 }
 
 function get_excerpt_of_id($id) {
-  return generate_custom_excerpt(get_post($id)->post_content);
+  return generate_custom_excerpt(get_post($id)->post_content, get_post($id)->post_excerpt);
 }
 
 
@@ -141,7 +144,7 @@ function get_latest_excerpt() {
     )
   );
 
-  return generate_custom_excerpt(get_posts($args)[0]->post_content);
+  return generate_custom_excerpt(get_posts($args)[0]->post_content, get_posts($args)[0]->post_excerpt);
 }
 
 
