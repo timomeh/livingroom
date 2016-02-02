@@ -12,7 +12,7 @@ if($thumbnails['large'] == "") {
 $title = get_the_title($post_id);
 
 $uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
-$uri_path = 'http://' . $_SERVER['HTTP_HOST'] . $uri_parts[0];
+$uri_path = 'https://' . $_SERVER['HTTP_HOST'] . $uri_parts[0];
 
 switch(get_post_format()) {
   case 'image':
